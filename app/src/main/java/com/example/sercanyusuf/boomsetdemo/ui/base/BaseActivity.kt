@@ -33,7 +33,7 @@ open class BaseActivity : AppCompatActivity(), BaseView {
     override fun dismissWaitingDialog() {
     }
 
-    override fun showErrorMessage(returnCode: Int, message: String?) {
+    override fun showErrorMessage(returnCode: Int, message: String) {
     }
 
 
