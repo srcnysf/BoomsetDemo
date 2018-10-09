@@ -8,8 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sercanyusuf.boomsetdemo.R
-import com.example.sercanyusuf.boomsetdemo.data.model.Result
+import com.example.sercanyusuf.boomsetdemo.data.model.attendee.AttendeeResult
+import com.example.sercanyusuf.boomsetdemo.data.model.event.EventResult
+import com.example.sercanyusuf.boomsetdemo.ui.attendees.AttendeeFragment
 import com.example.sercanyusuf.boomsetdemo.ui.base.BaseFragment
+import com.example.sercanyusuf.boomsetdemo.ui.main.MainActivity
 import com.example.sercanyusuf.boomsetdemo.ui.main.MainPresenter
 import com.example.sercanyusuf.boomsetdemo.ui.main.MainView
 import java.util.*
@@ -18,23 +21,18 @@ import javax.inject.Inject
 
 class EventFragment : BaseFragment(), MainView {
 
-
     @Inject
     internal lateinit var mMainPresenter: MainPresenter
     private var mLayoutManager: LinearLayoutManager? = null
     private var eventsAdapter: EventAdapter? = null
     private var recyclerView: RecyclerView? = null
+    private var eventId : Int? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
         mMainPresenter = MainPresenter()
         mMainPresenter.setView(this)
-
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -51,13 +49,28 @@ class EventFragment : BaseFragment(), MainView {
         mLayoutManager = LinearLayoutManager(activity?.applicationContext)
         recyclerView = activity!!.findViewById<RecyclerView>(R.id.events_recyclerview1)
         recyclerView?.layoutManager = this.mLayoutManager
+
+
+
+
         super.onActivityCreated(savedInstanceState)
     }
 
 
-    override fun ListEvents(events: List<Result>) {
+
+
+    override fun ListEvents(events: List<EventResult>) {
+
         recyclerView!!.adapter = EventAdapter(events, object : EventAdapter.OnItemClickListener {
-            override fun onItemClick(item: Result) {
+            override fun onItemClick(item: EventResult) {
+                mMainPresenter.getEvent(item.id!!)
+                val attendeeFragment = AttendeeFragment()
+
+                val mBundle = Bundle()
+                mBundle.putInt("eventId", item.id!!)
+                attendeeFragment.arguments = mBundle
+                (activity as MainActivity).switchFragment(attendeeFragment)
+
                 Log.d("TAG", "clicked" + item.name + item.timezone.toString())
 
                 var timezoneID = TimeZone.getDefault().id
@@ -67,7 +80,11 @@ class EventFragment : BaseFragment(), MainView {
             }
         })
 
+
     }
+
+
+
 
     override fun displayNetworkError() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -75,6 +92,10 @@ class EventFragment : BaseFragment(), MainView {
 
     override fun displayDatabaseError() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun ListAttendees(attendees: List<AttendeeResult>) {
+
     }
 
 

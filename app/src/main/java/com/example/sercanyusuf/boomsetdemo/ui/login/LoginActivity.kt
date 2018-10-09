@@ -46,7 +46,7 @@ class LoginActivity : BaseActivity(), LoginView {
         mPassword = passwordText!!.text.toString()
         if (mLoginPresenter.isEmailAndPasswordValid(mUsername!!, mPassword!!)) {
             hideKeyboard()
-            mLoginPresenter.login(mUsername, mPassword)
+            mLoginPresenter.login(mUsername!!, mPassword!!)
         } else {
             Toast.makeText(this, "Login Unsuccessful", Toast.LENGTH_SHORT).show()
         }

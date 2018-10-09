@@ -1,4 +1,4 @@
-package com.example.sercanyusuf.boomsetdemo.ui.events
+package com.example.sercanyusuf.boomsetdemo.ui.attendees
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.sercanyusuf.boomsetdemo.R
-import com.example.sercanyusuf.boomsetdemo.data.model.event.EventResult
+import com.example.sercanyusuf.boomsetdemo.data.model.attendee.AttendeeResult
 
-class EventAdapter(private val items: List<EventResult>, private val listener: OnItemClickListener) : RecyclerView.Adapter<EventAdapter.ViewHolder>() {
+class AttendeeAdapter(private val items: List<AttendeeResult>, private val listener: OnItemClickListener) : RecyclerView.Adapter<AttendeeAdapter.ViewHolder>() {
 
     interface OnItemClickListener {
-        fun onItemClick(item: com.example.sercanyusuf.boomsetdemo.data.model.event.EventResult)
+        fun onItemClick(item: com.example.sercanyusuf.boomsetdemo.data.model.attendee.AttendeeResult)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -21,13 +21,16 @@ class EventAdapter(private val items: List<EventResult>, private val listener: O
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(items[position], listener)
+        holder.bind(items.get(position), listener)
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
+    fun getList(): List<AttendeeResult> {
+        return items
+    }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -42,11 +45,11 @@ class EventAdapter(private val items: List<EventResult>, private val listener: O
             data1 = itemView.findViewById<View>(R.id.description) as TextView
         }
 
-        fun bind(item: EventResult, listener: OnItemClickListener) {
+        fun bind(item: AttendeeResult, listener: OnItemClickListener) {
             //item.setTimezone(19);
-            name.text = item.name
-            data.text = item.startsat
-            data1.text = item.endsat
+            name.text = item.contact!!.firstName
+            data.text = item.contact!!.lastName
+            data1.text = item.contact!!.phone.toString()
             itemView.setOnClickListener { listener.onItemClick(item) }
         }
     }

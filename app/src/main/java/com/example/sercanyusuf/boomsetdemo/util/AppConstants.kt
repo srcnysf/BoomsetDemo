@@ -3,14 +3,15 @@ package com.example.sercanyusuf.boomsetdemo.util
 object AppConstants {
 
 
-    val API_TOKEN = "Token 4f81fed8ec862793b0abb9318b2066c47439bb13"
+    const val API_TOKEN = "Token 4f81fed8ec862793b0abb9318b2066c47439bb13"
 
-    val HEADER = "Authorization"
+    const val HEADER = "Authorization"
 
-    val BASE_URL = "https://www.boomset.com"
+    const val BASE_URL = "https://www.boomset.com"
 
-    val EVENTS = "/apps/api/events"
-    val LOGIN = "/apps/api/auth"
+    const val EVENTS = "/apps/api/events"
+    const val ATTENDEE = "/apps/api/events/{event_id}/attendees"
+    const val LOGIN = "/apps/api/auth"
 
 
 }

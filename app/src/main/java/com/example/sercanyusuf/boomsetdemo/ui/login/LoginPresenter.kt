@@ -52,7 +52,7 @@ constructor() {
 
                 val loginResponse = LoginResponse()
                 val responseBody = response.body()
-                loginResponse.setToken(responseBody!!.getToken())
+                loginResponse.token = responseBody!!.token
 
                 mLoginView!!.onLoginSuccessful()
 

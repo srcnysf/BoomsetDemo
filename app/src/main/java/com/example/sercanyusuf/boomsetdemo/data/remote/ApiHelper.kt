@@ -1,13 +1,12 @@
 package com.example.sercanyusuf.boomsetdemoapp.data.remote
 
-import com.example.sercanyusuf.boomsetdemo.data.model.Events
 import com.example.sercanyusuf.boomsetdemo.data.model.LoginRequest
 import com.example.sercanyusuf.boomsetdemo.data.model.LoginResponse
+import com.example.sercanyusuf.boomsetdemo.data.model.attendee.Attendees
+import com.example.sercanyusuf.boomsetdemo.data.model.event.Events
 import com.example.sercanyusuf.boomsetdemo.util.AppConstants
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 
 interface ApiHelper {
@@ -19,4 +18,18 @@ interface ApiHelper {
 
     @GET(AppConstants.EVENTS)
     fun eventsRequest(): Call<Events>?
+
+
+
+    @GET(AppConstants.ATTENDEE)
+    fun attendeeRequest(
+            @Path("event_id") eventId: Int?
+    ): Call<Attendees>?
+
+    @GET(AppConstants.ATTENDEE)
+    fun attendeeRequest(
+            @Path("event_id") eventId: Int?,
+            @Query("page") page: Int
+    ): Call<Attendees>?
+
 }
