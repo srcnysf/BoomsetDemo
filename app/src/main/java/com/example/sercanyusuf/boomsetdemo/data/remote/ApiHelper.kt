@@ -1,10 +1,12 @@
 package com.example.sercanyusuf.boomsetdemoapp.data.remote
 
+import com.example.sercanyusuf.boomsetdemo.data.model.Events
 import com.example.sercanyusuf.boomsetdemo.data.model.LoginRequest
 import com.example.sercanyusuf.boomsetdemo.data.model.LoginResponse
 import com.example.sercanyusuf.boomsetdemo.util.AppConstants
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 
@@ -15,5 +17,6 @@ interface ApiHelper {
     @POST(AppConstants.LOGIN)
     fun loginRequest(@Body loginRequest: LoginRequest): Call<LoginResponse>
 
-
+    @GET(AppConstants.EVENTS)
+    fun eventsRequest(): Call<Events>?
 }

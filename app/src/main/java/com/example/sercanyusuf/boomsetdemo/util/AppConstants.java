@@ -4,7 +4,7 @@ public final class AppConstants {
 
 
 
-    public static final String API_TOKEN = "4f81fed8ec862793b0abb9318b2066c47439bb13";
+    public static final String API_TOKEN = "Token 4f81fed8ec862793b0abb9318b2066c47439bb13";
 
     public static final String HEADER = "Authorization";
 
