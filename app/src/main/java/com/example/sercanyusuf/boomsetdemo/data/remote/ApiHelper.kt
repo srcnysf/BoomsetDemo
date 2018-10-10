@@ -11,15 +11,11 @@ import retrofit2.http.*
 
 interface ApiHelper {
 
-
-    //@Headers("Authorization: Token 4f81fed8ec862793b0abb9318b2066c47439bb13")
     @POST(AppConstants.LOGIN)
     fun loginRequest(@Body loginRequest: LoginRequest): Call<LoginResponse>
 
     @GET(AppConstants.EVENTS)
     fun eventsRequest(): Call<Events>?
-
-
 
     @GET(AppConstants.ATTENDEE)
     fun attendeeRequest(
@@ -31,5 +27,4 @@ interface ApiHelper {
             @Path("event_id") eventId: Int?,
             @Query("page") page: Int
     ): Call<Attendees>?
-
 }

@@ -1,13 +1,16 @@
 package com.example.sercanyusuf.boomsetdemo.data.model.event
 
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-//@Entity(tableName = "group")
+@Entity(tableName = "group")
 class Group {
 
     @SerializedName("id")
     @Expose
+    @PrimaryKey
     var id: Int? = null
     @SerializedName("name")
     @Expose

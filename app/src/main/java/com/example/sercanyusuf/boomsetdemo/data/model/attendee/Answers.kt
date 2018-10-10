@@ -3,7 +3,7 @@ package com.example.sercanyusuf.boomsetdemo.data.model.attendee
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Answer {
+class Answers {
 
     @SerializedName("answer")
     @Expose

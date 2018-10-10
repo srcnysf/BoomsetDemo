@@ -7,5 +7,4 @@ interface BaseView {
     fun dismissWaitingDialog()
 
     fun showErrorMessage(returnCode: Int, message: String)
-
 }

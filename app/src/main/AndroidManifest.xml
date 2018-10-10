@@ -24,7 +24,10 @@
         </activity>
         <activity
             android:name="com.example.sercanyusuf.boomsetdemoapp.ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login">
+
+
+        </activity>
 
     </application>
 

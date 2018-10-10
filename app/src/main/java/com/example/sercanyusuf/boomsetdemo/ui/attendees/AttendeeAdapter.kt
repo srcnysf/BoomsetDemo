@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import com.example.sercanyusuf.boomsetdemo.R
 import com.example.sercanyusuf.boomsetdemo.data.model.attendee.AttendeeResult
@@ -16,7 +15,7 @@ class AttendeeAdapter(private val items: List<AttendeeResult>, private val liste
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.event_list_item, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.attendee_list_item, parent, false)
         return ViewHolder(v)
     }
 
@@ -35,21 +34,28 @@ class AttendeeAdapter(private val items: List<AttendeeResult>, private val liste
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val name: TextView
-        private val image: ImageView? = null
-        private val data: TextView
-        private val data1: TextView
+        private val lName: TextView
+        private val company: TextView
+        private val mail: TextView
 
         init {
-            name = itemView.findViewById<View>(R.id.title) as TextView
-            data = itemView.findViewById<View>(R.id.subtitle) as TextView
-            data1 = itemView.findViewById<View>(R.id.description) as TextView
+            name = itemView.findViewById<View>(R.id.firstname) as TextView
+            lName = itemView.findViewById<View>(R.id.lastname) as TextView
+            company = itemView.findViewById<View>(R.id.company) as TextView
+            mail = itemView.findViewById<View>(R.id.mail) as TextView
+
+
         }
 
         fun bind(item: AttendeeResult, listener: OnItemClickListener) {
-            //item.setTimezone(19);
             name.text = item.contact!!.firstName
-            data.text = item.contact!!.lastName
-            data1.text = item.contact!!.phone.toString()
+            lName.text = item.contact!!.lastName
+            if(item.workInfo!!.company!!.isEmpty()){
+                company.text = "Person doesnt work"
+            }else {
+                company.text = "Company: " + item.workInfo!!.company
+            }
+            mail.text = item.contact!!.email
             itemView.setOnClickListener { listener.onItemClick(item) }
         }
     }

@@ -1,14 +1,15 @@
 package com.example.sercanyusuf.boomsetdemoapp.ui.base
 
-import android.app.ProgressDialog
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import com.example.sercanyusuf.boomsetdemo.ui.base.BaseView
 import com.example.sercanyusuf.boomsetdemo.util.NetworkUtils
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 open class BaseActivity : AppCompatActivity(), BaseView {
-    internal var mProgressDialog: ProgressDialog? = null
 
     val isNetworkConnected: Boolean
         get() = NetworkUtils.isNetworkConnected(applicationContext)
@@ -21,22 +22,16 @@ open class BaseActivity : AppCompatActivity(), BaseView {
         }
     }
 
-    fun hideLoading() {
-        if (mProgressDialog != null && mProgressDialog!!.isShowing) {
-            mProgressDialog!!.cancel()
-        }
-    }
-
     override fun showWaitingDialog() {
+        pb.visibility = View.VISIBLE
     }
 
     override fun dismissWaitingDialog() {
+        pb.visibility = View.GONE
     }
 
     override fun showErrorMessage(returnCode: Int, message: String) {
     }
-
-
 
 
 }

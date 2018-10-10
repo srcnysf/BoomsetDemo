@@ -16,7 +16,7 @@ class AttendeeResult {
     var workInfo: WorkInfo? = null
     @SerializedName("answers")
     @Expose
-    var answers: List<Answer>? = null
+    var answers: List<Answers>? = null
     @SerializedName("checkin_info")
     @Expose
     var checkinInfo: List<CheckinInfo>? = null

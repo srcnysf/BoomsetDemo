@@ -5,15 +5,29 @@ import com.example.sercanyusuf.boomsetdemo.data.model.event.EventResult
 
 interface MainView {
 
-    fun ListEvents(events: List<EventResult>)
-    fun ListAttendees(attendees: List<AttendeeResult>)
+    interface View{
+
+        fun ListEvents(events: List<EventResult>)
+
+        fun ListAttendees(attendees: List<AttendeeResult>)
+
+        fun displayNetworkError()
+
+        fun displayDatabaseError()
+
+    }
+
+    interface Presenter{
+
+        fun  listEvents()
+
+        fun listAttendees(eventId:Int)
+
+        fun listAttendees(eventId:Int, pageNumber:Int)
+
+        fun getEvent(eventId: Int)
 
 
-    //void displayResult(String result);
-
-    fun displayNetworkError()
-
-    fun displayDatabaseError()
-
+    }
 
 }

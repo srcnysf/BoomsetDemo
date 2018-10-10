@@ -12,21 +12,4 @@ class LoginRequest {
     @SerializedName("password")
     var password: String? = null
 
-    //    @Override
-    //    public boolean equals(Object object) {
-    //        if (this == object) {
-    //            return true;
-    //        }
-    //        if (object == null || getClass() != object.getClass()) {
-    //            return false;
-    //        }
-    //
-    //        LoginRequest that = (LoginRequest) object;
-    //
-    //        if (username != null ? !username.equals(that.username) : that.username != null) {
-    //            return false;
-    //        }
-    //        return password != null ? password.equals(that.password) : that.password == null;
-    //    }
-
 }

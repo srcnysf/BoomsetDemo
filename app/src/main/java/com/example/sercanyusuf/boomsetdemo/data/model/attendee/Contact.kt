@@ -7,7 +7,7 @@ class Contact {
 
     @SerializedName("prefix")
     @Expose
-    var prefix: Any? = null
+    var prefix: String? = null
     @SerializedName("first_name")
     @Expose
     var firstName: String? = null
@@ -19,12 +19,12 @@ class Contact {
     var suffix: Any? = null
     @SerializedName("phone")
     @Expose
-    var phone: Any? = null
+    var phone: String? = null
     @SerializedName("cellphone")
     @Expose
-    var cellphone: Any? = null
+    var cellphone: String? = null
     @SerializedName("email")
     @Expose
-    var email: Any? = null
+    var email: String? = null
 
 }
