@@ -1,19 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BoomsetDemo</string>
-    <string name="title_activity_login">Sign in</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+<string name="app_name">"Guest List"</string>
+<string name="havent_created_any_events_yet">"You haven’t created any events yet"</string>
+<string name="events_are_synchronizing">"Events are synchronizing"</string>
+<string name="button_create_event">"Create event"</string>
+<string name="hello_world">"Hello world!"</string>
+<string name="action_settings">"Settings"</string>
+<string name="guest_settings">"Guest Settings"</string>
+<string name="action_kiosk">"Kiosk Mode"</string>
+<string name="title_activity_edit_lead">"EditLeadActivity"</string>
+<string name="drawer_open">"open"</string>
+<string name="drawer_close">"close"</string>
+<string name="sync">"Sync"</string>
+<string name="SendMail">"Send Email"</string>
+<string name="edit">"Edit"</string>
+<string name="bad_barcode_msg">"Invalid barcode for the event."</string>
+<string name="title_activity_password_prompt">"PasswordPromptActivity"</string>
+<string name="cardnumber">"Card Number"</string>
+<string name="creditcard">"Credit Card Information"</string>
+<string name="Add_Event">"Add New Event"</string>
+<string name="title_activity_add__new__event_">"Add_New_Event_Activity"</string>
+<string name="title_activity_add_new">"AddNewActivity"</string>
+<string name="title_activity_guest_event_check_in">"GuestEventCheckInActivity"</string>
+<string name="navigation_drawer_open">"Open navigation drawer"</string>
+<string name="navigation_drawer_close">"Close navigation drawer"</string>
+<string name="action_example">"Example action"</string>
+<string name="title_activity_new_guest_event_list">"NewGuestEventListActivity"</string>
+<string name="hello_blank_fragment">"Hello blank fragment"</string>
+<string name="title_activity_guest_list_dash_board">"guestListDashBoard"</string>
+<string name="title_activity_session_details_activity">"SessionDetailsActivity"</string>
+<string name="event_list_order_name_ascend_name">"Event Name ▲"</string>
+<string name="event_list_order_name_descend_name">"Event Name ▼"</string>
+<string name="event_list_order_date_ascend_name">"Event Name  "</string>
+<string name="event_list_order_date_ascend_date">"Event Date ▲"</string>
+<string name="event_list_order_date_descend_date">"Event Date ▼"</string>
+<string name="event_list_order_name_ascend_date">"Event Date"</string>
+<string name="session_list_order_date_ascend_date">"Session Date ▲"</string>
+<string name="session_list_order_date_descend_date">"Session Date ▼"</string>
+<string name="action_bar_title_events">"Events"</string>
+<string name="action_bar_title_printer_setup">"Printer Setup"</string>
+<string name="action_bar_title_help">"Help"</string>
+<string name="event_filter_dialog_title">"Filter Events"</string>
+<string name="event_filter_dialog_title_done">"Done"</string>
+<string name="event_filter_dialog_type_all_events">"All Events"</string>
+<string name="event_filter_dialog_type_live_events">"Live Events"</string>
+<string name="event_filter_dialog_type_past_events">"Past Events"</string>
+<string name="auto_print">"AutoPrint"</string>
+<string name="auto_print_description">"Checkin &amp; autoprint guest badges"</string>
+<string name="name_sort_order">"Name Order"</string>
+<string name="name_sort_order_description">"Change the default name order"</string>
+<string name="custom_field">"Custom Field"</string>
+<string name="custom_field_description">"Choose what will be displayed in the guest list columns"</string>
+<string name="contact_info">"Contact Information"</string>
+<string name="newprefix">"*prefix"</string>
+<string name="printer_image">"printerImage"</string>
+<string name="ip">"208.185.19.19"</string>
+<string name="printer_name">"Brother QL710W"</string>
+<string name="comments">"Comments"</string>
+<string name="add_comment">"Add a new comment"</string>
+<string name="seats_left">"Seats left"</string>
+<string name="seats">"Seats"</string>
+<string name="about_this_session">"About This Session"</string>
+<string name="there_is_no_room_in_this_session">"Sold out session"</string>
+<string name="Syncing">"Syncing"</string>
+<string name="Sync_complete">"Sync Complete"</string>
+<string name="registration_type">"Registration Type"</string>
+<string name="registration_type_change">"Change the registration type of the guest."</string>
+<string name="registration_type_change_2">"Change registration type"</string>
+<string name="walk_in_title">"Fill Out The Fields Below"</string>
+<string name="you_are_already_attending_to_this_session">"You are already attending to this session"</string>
+<string name="this_session_is_sold_out">"This session is sold out, please try another one"</string>
+<string name="session_is_successfully_selected">"Session is successfully selected"</string>
+<string name="registration_type_filter">"Filters"</string>
+<string name="clear_all">"Clear All"</string>
+<string name="name_of_regi">"name of registration"</string>
+<string name="no_filt_select">"No Filter Selected"</string>
+<string name="title_activity_custom_scanner">"CustomScanner"</string>
+<string name="title_activity_intercom_list">"intercomListActivity"</string>
+<string name="title_activity_support_chat">"supportChat"</string>
+<string name="message_input">"Start a conversation..."</string>
+<string name="send_button">"Send"</string>
+<string name="hide_deactivated">"Hide Deactivated"</string>
+<string name="deactivated_text">"You can hide deactivated attendees"</string>
+<string name="scan">"Scan"</string>
+<string name="title_activity_main">"MainActivity"</string>
+<string name="title_activity_walkin">"Fill Out The Fields Below"</string>
+<string name="title_activity_kiosk_search">"Start typing to search"</string>
+<string name="title_activity_kiosk_sessions">"Sessions"</string>
+<string name="just_now">"Just now"</string>
+<string name="greeting_message">"Greeting Message"</string>
+<string name="please_confirm_password">"Please confirm your password"</string>
+<string name="send_ticket">"Send Ticket"</string>
+<string name="bizzabo_checkin_text">"This feature is not available with Bizzabo Integrations"</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+<!-- Registration -->
+<string name="barcode_information">"Barcode Information"</string>
+<string name="registration_status">"Registration Status"</string>
+<string name="nfc_status">"NFC Status"</string>
+
+<!-- WalkinActivity -->
+<string name="attende_succesfully_added">"Attendee succesfully added."</string>
+<string name="attende_added_detail">"Please hit OK to be transferred to the attendee details screen."</string>
+
+<!-- AddGuestActivity -->
+<string name="free">"Free"</string>
+<string name="total">"Total:"</string>
+<string name="select_registration_type">"Select Registration Type"</string>
+<string name="payment_type">"Payment Type"</string>
+<string name="select_status_type">"Select Status Type"</string>
+<string name="credit_card">"Credit Card"</string>
+<string name="payment_information">"Payment Information"</string>
+<string name="credit_card_information">"Credit Card Information"</string>
+<string name="credit_card_number">"Credit Card Number"</string>
+<string name="expiration_date">"Expiration Date"</string>
+<string name="security_code">"Security Code"</string>
+<string name="zip_code">"Zip Code"</string>
+<string name="complimentary">"Complimentary"</string>
+<string name="not_paid">"Not Paid"</string>
+<string name="cash">"Cash"</string>
+<string name="check">"Check"</string>
+<string name="paypal">"Paypal"</string>
+<string name="google_checkout">"Google Checkout"</string>
+<string name="square">"Square"</string>
+<string name="amazon_checkout">"Amazon Checkout"</string>
+<string name="other">"Other"</string>
+<string name="done">"Done"</string>
+<string name="clear">"Clear"</string>
+<string name="card_not_valid">"Card not valid"</string>
+<string name="card_valid">"Card valid"</string>
+<string name="custom_information">"Custom Information"</string>
+<string name="ticket_sent">"Ticket sent"</string>
+<string name="select_register_type">"Please select a Registration Type"</string>
+<string name="_select_register_type">"*Select Registration Type"</string>
+<string name="_registration_type">"*Registration Type"</string>
+<string name="quantity">"Quantity"</string>
+<string name="price">"Price"</string>
+<string name="full_name">"Full Name"</string>
+<string name="_first_name">"*First Name"</string>
+<string name="_last_name">"*Last Name"</string>
+<string name="email">"Email"</string>
+<string name="blog">"Blog"</string>
+<string name="website">"Website"</string>
+<string name="workphone">"Work phone"</string>
+<string name="job">"Job"</string>
+<string name="company">"Company"</string>
+<string name="cellphone">"Cellphone"</string>
+<string name="prefix">"Prefix"</string>
+<string name="suffix">"Suffix"</string>
+<string name="phone">"Phone"</string>
+<string name="phone_number">"Phone Number"</string>
+<string name="reservation_type">"Please select reservation type"</string>
+<string name="first_name">"Please enter first name"</string>
+<string name="last_name">"Please enter last name"</string>
+<string name="enter_full_name">"Please enter full name"</string>
+<string name="enter_email">"Please enter email"</string>
+<string name="email_not_valid">"E-mail is not valid"</string>
+<string name="enter_blog">"Please enter blog"</string>
+<string name="enter_website">"Please enter website"</string>
+<string name="enter_workphone">"Please enter work phone"</string>
+<string name="enter_job">"Please enter job"</string>
+<string name="enter_company">"Please enter company"</string>
+<string name="enter_cellphone">"Please enter cellphone"</string>
+<string name="enter_prefix">"Please enter prefix"</string>
+<string name="enter_suffix">"Please enter suffix"</string>
+<string name="enter_phone">"Please enter phone"</string>
+<string name="enter_last_name">"Please enter last name"</string>
+<string name="please_enter">"Please enter %s"</string>
+<string name="error_on_form">"Error on form!"</string>
+<string name="reservations">"Reservations"</string>
+<string name="no_devices_found">"No devices found"</string>
+<string name="checking_printer_status">"Checking printer status…"</string>
+<string name="printer_not_ready_message">"%1$s (%2$s). Please fix the issue and try again."</string>
+
+<!-- Progress -->
+<string name="loading">"Loading..."</string>
+<string name="creating_user">"Creating user..."</string>
+<string name="updating">"Updating..."</string>
+<string name="adding_printer">"Adding printer..."</string>
+<string name="please_wait">"Please wait..."</string>
+<string name="loading_event_data">"Loading event data please wait.."</string>
+<string name="demo_event_created">"Demo event created successfully."</string>
+<string name="internet_network_canged">"The internet network seems to have changed, please check the settings on your device."</string>
+
+<!-- KioskActivity -->
+<string name="kiosk_mode_password">"Do you want to enter Kiosk Mode? You will need Kiosk or Account Password in order to exit from Kiosk Mode later."</string>
+<string name="auto_pilot_mode_password">"Going on Auto-Pilot? You will need your Kiosk or Account Password to unlock later."</string>
+<string name="unlock_mode_password">"Enter Kiosk or Account Password to unlock"</string>
+<string name="wrong_password">"Wrong password"</string>
+<string name="barcode_not_activated">"This Barcode has not yet been activated"</string>
+
+<!-- Button -->
+<string name="button_cancel">"Cancel"</string>
+<string name="button_continue">"Continue"</string>
+<string name="button_ok">"Ok"</string>
+<string name="button_done">"Done"</string>
+<string name="button_clear">"Clear"</string>
+<string name="button_close">"Close"</string>
+<string name="button_delete">"Delete"</string>
+<string name="button_filter">"Filter"</string>
+<string name="button_auto_pilot">"Auto Pilot"</string>
+<string name="button_yes">"Yes"</string>
+<string name="button_no">"No"</string>
+<string name="button_try_again">"Try Again"</string>
+<string name="button_add">"Add"</string>
+<string name="button_remove">"Remove"</string>
+<string name="button_sold_out">"Sold out"</string>
+<string name="button_walkin">"Walkin"</string>
+<string name="button_last_first">"Last, First"</string>
+<string name="button_first_last">"First, Last"</string>
+<string name="button_start">"Start"</string>
+<string name="button_override">"Override"</string>
+
+<!-- Printer Options -->
+<string name="printer_options">"PRINTER OPTIONS"</string>
+<string name="printer_options_lowercase">"Printer Options"</string>
+<string name="select_a_printer">"Select a printer"</string>
+<string name="printer_ip">"Printer IP"</string>
+<string name="rfid_options">"RFID OPTIONS"</string>
+<string name="camera_options">"CAMERA OPTIONS"</string>
+<string name="rfid_device_pair">"RFID Device (Pair)"</string>
+<string name="rfid_device_read">"RFID Device (Read)"</string>
+<string name="select_rfid_device_pair">"Select RFID Device for pairing"</string>
+<string name="select_rfid_device_read">"Select RFID Device for reading"</string>
+
+<!-- Badge -->
+<string name="badge_preview">"Badge Preview"</string>
+<string name="no_badge_design">"No Badge Design Available"</string>
+<string name="wrong_label_error">"The selected label size is not compatible with the label size in the chosen printer. Please check the label size in the printer before making your selection."</string>
+<string name="printer_connection_error_brother">"The Brother printer is not ready. Please reset or try again"</string>
+<string name="printer_connection_error_zebra">"The Zebra printer is not ready. Please reset or try again"</string>
+<string name="cannot_connect_brother">"Cannot connect to Brother printer. Please reconnect printer."</string>
+<string name="cannot_connect_zebra">"Cannot connect to Zebra printer. Please reconnect printer."</string>
+<string name="badge_design_not_compatible_brother">"Badge design is not compatible with Brother Printer, please check from admin panel."</string>
+<string name="badge_design_not_compatible_zebra">"Badge design is not compatible with Zebra Printer, please check from admin panel."</string>
+<string name="no_badge_templates">"No badge templates are set up with the registration type of the selected attendee. Visit -Design- on your admin panel to set a badge for this type"</string>
+<string name="selected_session_printing">"You are currently scanning for session,  %s. To allow for badge printing you must exit the session experience."</string>
+<string name="no_badge_templates_for_registration">"There are badge(s) created in this event, but there are none set to this registration type. Please visit the web platform design section, and set at least one badge template to this registration type."</string>
+<string name="automatically_check_in">"By tapping continue you will automatically check-in the attendee"</string>
+
+<!-- checkout-checkin -->
+<string name="checkout">"Check out"</string>
+<string name="checkin">"Check in"</string>
+<string name="not_checked_in_yet">"NOT CHECKED IN YET"</string>
+<string name="not_checked_in">"NOT CHECKED IN"</string>
+<string name="_checked_in">"CHECKED IN"</string>
+<string name="activate">"Activate"</string>
+<string name="cannot_check_in">"you cannot check in anymore attendees."</string>
+
+<!-- KioskSelfieActivity -->
+<string name="selfie_text">"We have found a selfie for you, please retake or accept by selecting Next."</string>
+<string name="great_big_smile">"Give us a great big smile"</string>
+
+<!-- ScanActivity -->
+<string name="tap_to_checkout">"Tap to check-out"</string>
+<string name="tap_to_checkin">"Tap to check-in"</string>
+<string name="scan_or_tap_to_checkout">"Scan your barcode or Tap to check-out"</string>
+<string name="scan_or_tap_to_checkin">"Scan your barcode or Tap to check-in"</string>
+<string name="scan_to_checkout">"Scan your barcode to check-out"</string>
+<string name="scan_to_checkin">"Scan your barcode to check-in"</string>
+<string name="search_by_email">"Search by email"</string>
+<string name="search_by_name">"Search by name"</string>
+<string name="search_name">"Search name"</string>
+<string name="scan_your_barcode">"Scan your barcode"</string>
+<string name="tap_your_device">"Tap your device"</string>
+<string name="scan_your_barcode_or_tap_your_device">"Scan your barcode or tap your device"</string>
+<string name="not_valid_barcode">"Not a valid barcode"</string>
+<string name="barcode_already_used">"Barcode already used!"</string>
+<string name="checked_in">"Checked in!"</string>
+<string name="checked_out">"Checked out!"</string>
+<string name="attendee_not_allowed">"Attendee not allowed in this session!"</string>
+<string name="unpaired_rfid_tag">"Unpaired RFID tag!"</string>
+<string name="unpaired_uhf_tag">"Unpaired UHF tag!"</string>
+
+<!-- Printer -->
+<string name="printer_disconnected">"PRINTER IS DISCONNECTED"</string>
+<string name="printer_connected">"PRINTER IS CONNECTED"</string>
+<string name="connection_offline">"THE CONNECTION APPEARS TO BE OFFLINE."</string>
+<string name="added_zebra_printer">"Added Zebra Printer"</string>
+<string name="added_brother_printer">"Added Brother Printer"</string>
+<string name="added_ftp_printer">"Added FTP Printer"</string>
+<string name="no_connection">"No connection."</string>
+<string name="setting_up_printer">"Setting up printer..."</string>
+<string name="cannot_connect_printer">"Cannot connect to printer. Please reconnect printer."</string>
+<string name="tap_here_to_add_manually">"Tap here to add manually."</string>
+<string name="manual_selection">"Manual Selection"</string>
+<string name="no_printer_selected">"No Printer selected yet. Please go to Printer Setup to connect a Printer, or disable Auto-Print from the settings menu"</string>
+<string name="your_badge_is_printing">"Your badge is printing"</string>
+<string name="enter_ip_address">"Enter IP Address for the printer "</string>
+<string name="no_printers_found">"No Printers Found"</string>
+<string name="printer_selected">"SELECTED"</string>
+<string name="connected">"CONNECTED"</string>
+
+<!-- Kiosk -->
+<string name="select_experience">"Experience"</string>
+<string name="kiosk_passcode">"Please set a temporary Kiosk passcode"</string>
+<string name="kiosk_passcode_">"Please enter Kiosk password"</string>
+<string name="requesting_attendee_updates">"REQUESTING ATTENDEE UPDATES"</string>
+<string name="requesting_event_updates">"REQUESTING EVENT UPDATES"</string>
+<string name="requesting_updates">"REQUESTING UPDATES"</string>
+<string name="downloading">"DOWNLOADING %s"</string>
+<string name="downloading_pdf">"Downloading PDF"</string>
+<string name="requesting_pdf">"Requesting PDF"</string>
+<string name="dont_have_signed_pdf">"Dont have any signatures yet."</string>
+<string name="syncing">" SYNCING "</string>
+<string name="cannot_sync">"CANNOT SYNCHRONISE"</string>
+<string name="sync_completed">"SYNC COMPLETED"</string>
+<string name="no_sessions_setup">"There are no sessions setup, please add sessions from admin panel (www.boomset.com)"</string>
+<string name="no_registration_setup">"There are no registration type setup, please add registration types from admin panel (www.boomset.com)"</string>
+<string name="sessions">"Sessions"</string>
+<string name="filters">"Registration Type Filter"</string>
+<string name="filter">"Filter"</string>
+
+<!-- MainActivity -->
+<string name="filter_events">"Filter events"</string>
+<string name="sent_from">"Sent from Guest List Android App"</string>
+<string name="are_you_sure">"Are you sure you want to log out?"</string>
+<string name="are_you_sure_printer">"Are you sure?"</string>
+<string name="logging_out">"Logging out"</string>
+<string name="unsynced_data">"You have unsynced data, please connect to internet or your wireless network to sync your data before logging out."</string>
+<string name="events">"Events"</string>
+<string name="profile">"Profile"</string>
+<string name="device_options">"Device Options"</string>
+<string name="help">"Help"</string>
+<string name="logout">"Logout"</string>
+<string name="contact_boomset">"Contact Boomset"</string>
+<string name="boomset_phone_number">"+1(860) 266 6738"</string>
+<string name="boomset_help_mail">"help@boomset.com"</string>
+<string name="send_us_message">"Send us a message"</string>
+<string name="connect_boomset">"Connect Boomset"</string>
+
+<!-- NfcActivity -->
+<string name="nfc_not_supported">"This device does not support the use of NFC."</string>
+<string name="nfc_not_supported_event">"This event doesnt support NFC"</string>
+<string name="enable_disable_fnc">"Enable/Disable NFC functionality"</string>
+<string name="enable_disable_comment">"Enable/Disable Comment Page"</string>
+<string name="tap_nfc">"Please tap your NFC/RFID!"</string>
+<string name="close_uhf">"Please get close your UHF!"</string>
+<string name="nfc_is_turned_off">"NFC is turned off"</string>
+<string name="please_turn_on_nfc">"Please turn on NFC"</string>
+<string name="uhf_tag_already_used">"This UHF tag is already being used, you can use another RFID tag or deactivate this one."</string>
+<string name="tag_already_used">"This RFID tag is already being used, you can use another RFID tag or deactivate this one."</string>
+<string name="tag_paired">"Your RFID tag paired"</string>
+<string name="uhf_tag_paired">"Your UHF tag paired"</string>
+<string name="enjoy_your_day">"Enjoy your day!"</string>
+<string name="ugrokit_not_plugged_in">"uGrokit is not plugged in"</string>
+<string name="select_device">"Please select a device to pair in Device Options Menu"</string>
+
+<!-- KioskGuest -->
+<string name="re_encode_nfc">"RFID / NFC Re-Encode"</string>
+<string name="reprint_badge">"Badge Reprint"</string>
+<string name="print_badge">"Print Badge"</string>
+<string name="my_selfie">"My Selfie"</string>
+<string name="my_details">"My Details"</string>
+<string name="my_sessions">"My Sessions"</string>
+<string name="my_signature">"My Signature"</string>
+<string name="you_already_checked_in">"You already checked In"</string>
+<string name="options">"Options"</string>
+
+<!-- KioskSearch -->
+<string name="no_results_found">"No results found."</string>
+<string name="button_add_me">"Add me"</string>
+<string name="search_by">"Search by"</string>
+
+<!-- SelfieActivity -->
+<string name="retake">"Retake"</string>
+<string name="we_need_your_selfie">"Hold tight, we need your selfie"</string>
+<string name="next">"Next"</string>
+
+<!-- SessionDetailsActivity -->
+<string name="add_me_to_this_session">"Add me to this session"</string>
+<string name="you_are_attending_to_session">"You are attending to this session"</string>
+<string name="remove_me">"Remove me"</string>
+<string name="sold_out">"Sold out"</string>
+<string name="start_to_end">"%s to %s"</string>
+<string name="description">"description"</string>
+<string name="registering">"Registering..."</string>
+<string name="removing_registration">"Removing registration..."</string>
+<string name="you_are_attending">"You are attending"</string>
+<string name="sold_out_session">"Sold out session"</string>
+<string name="attend_this_session">"Attend this session"</string>
+<string name="filtering_not_matched">"Filtering not matched"</string>
+<string name="registered_to">"Registered to %s"</string>
+<string name="checked_in_to">"Checked-in to %s"</string>
+<string name="checked_out_from">"Checked-out from %s"</string>
+<string name="input_sessions">"%s Sessions "</string>
+<string name="session_has_ended">"%s has ended,"</string>
+<string name="all_sessions">"All "</string>
+<string name="attended">"Attending "</string>
+<string name="search_session_name">"Search session name"</string>
+<string name="notification_settings">"Notification Settings"</string>
+<string name="checkin_notification">"Check-in Notification"</string>
+<string name="notify_group_members">"Notifiy Group Members"</string>
+<string name="notification_message">"Notification Message"</string>
+<string name="additional_recipient">"Additional Recipient"</string>
+<string name="notification_message_hint">"[Guest Full Name] has check in! [Check-in Time]"</string>
+<string name="email_adress_or_phone_number">"Email address or mobile phone number"</string>
+<string name="add_recipient">"Add Recipient"</string>
+
+<!-- Signature -->
+<string name="title_activity_kiosk_signature">"TOS Signature"</string>
+<string name="non_disclosure_agreement">"Non-Disclosure Agreement"</string>
+<string name="signature">"Signature"</string>
+
+<!-- Registration -->
+<string name="registration_currently_active">"Registration is currently active"</string>
+<string name="registration_currently_deactive">"Registration is currently deactivated"</string>
+<string name="registration_comment">"Registration Comment"</string>
+<string name="delete_user">"Delete User"</string>
+<string name="delete_user_subtext">"This will Delete User forever"</string>
+
+<!-- Internet -->
+<string name="internet_connection_offline">"The internet connection appears to be offline"</string>
+<string name="internet_connection_need">"You need internet connection to see signatures"</string>
+<string name="waiting_for_connection">"Waiting for network connection"</string>
+<string name="something_went_wrong">"Something went wrong!"</string>
+
+<!-- Alert -->
+<string name="free_version_of_boomset">"This is the free version of Boomset for up to 25 guests."</string>
+<string name="upgrade_premium">" To upgrade to Boomset Premium, contact our office"</string>
+
+<!-- Login -->
+<string name="sign_in">"Sign in"</string>
+<string name="sign_up">"Sign Up"</string>
+<string name="create_account">"Create account"</string>
+<string name="skip">"Skip"</string>
+<string name="dont_have_account">"Don't have an account?"</string>
+<string name="password">"Password"</string>
+<string name="username">"Username"</string>
+<string name="your_name">"Your Name"</string>
+<string name="login_failed">"Login Failed! Please check your network connection or login info(username and password are case sensitive)."</string>
+<string name="enter_password">"Enter Password"</string>
+<string name="api_key_refreshed">"API key has been refreshed!"</string>
+<string name="re_enter_password">"Please re-enter your password"</string>
+<string name="name_required">"Name is required"</string>
+<string name="password_required">"Password is required"</string>
+<string name="password_must_contain">"Password must contain at least 8 characters, least 1 alphabet and 1 number."</string>
+<string name="email_required">"Email is required"</string>
+<string name="device_is_offline">"Your device is offline"</string>
+<string name="username_missing">"Login Failed! Username is missing"</string>
+<string name="password_missing">"Login Failed! Password is missing"</string>
+<string name="enter_valid_email">"Please enter valid email!"</string>
+<string name="please_hold_while_sign_you">"Please hold while we sign you in"</string>
+<string name="forgot_password">"Forgot your password?"</string>
+<string name="com.zendesk.sdk.url">"https://boomsethelp.zendesk.com"</string>
+<string name="com.zendesk.sdk.identifier">"d515a13dff548d61417f81dd451ea9451e0594f28695defe"</string>
+<string name="com.zendesk.sdk.clientIdentifier">"mobile_sdk_client_f222e48d6fa34a59999d"</string>
+<string name="zendesk_url">"https://boomsethelp.zendesk.com/hc/en-us"</string>
+<string name="title_activity_sessions_rooms">"SessionsRoomsActivity"</string>
+<string name="section_format">"Hello World from section: %1$d"</string>
+<string name="title_activity_comments">"Comments"</string>
+<string name="company_string">"Company"</string>
+<string name="company_string_ascend">"Company▲"</string>
+<string name="company_string_descend">"Company▼"</string>
+<string name="email_string">"Email"</string>
+<string name="email_string_ascend">"Email▲"</string>
+<string name="email_string_descend">"Email▼"</string>
+<string name="paid_string">"Paid"</string>
+<string name="paid_string_ascend">"Paid▲"</string>
+<string name="paid_string_descend">"Paid▼"</string>
+<string name="checkIn_string">"Check-In"</string>
+<string name="checkIn_string_ascend">"Check-In▲"</string>
+<string name="checkIn_string_descend">"Check-In▼"</string>
+<string name="checkIn">"Check In"</string>
+<string name="title_activity_guest_info">"GuestInfoActivity"</string>
+<string name="nav_header_title">"Android Studio"</string>
+<string name="nav_header_subtitle">"android.studio@android.com"</string>
+<string name="nav_header_desc">"Navigation header"</string>
+<string name="delay_check_in_out_screen">"Delay check in/out screen"</string>
+<string name="last_first">"Last, First"</string>
+<string name="firts_last">"Firts, Last"</string>
 </resources>
