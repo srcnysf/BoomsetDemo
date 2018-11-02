@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="app_name">"Guest List"</string>
+<string name="app_name">"Guest List Osman"</string>
 <string name="havent_created_any_events_yet">"You haven’t created any events yet"</string>
 <string name="events_are_synchronizing">"Events are synchronizing"</string>
 <string name="button_create_event">"Create event"</string>
